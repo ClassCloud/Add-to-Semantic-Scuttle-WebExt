@@ -59,7 +59,7 @@ function shareURL(selectionContent,currentTab){
 
 browser.contextMenus.create({
 	id: "semantic-scuttle",
-	title: "Add to (Semantic)Scuttle",
+	title: "Add to Bookmarkz",
 	onclick: function(){
     browser.tabs.query({ currentWindow: true, active: true }, function(tabs) {
       tab = tabs[0];
@@ -79,7 +79,7 @@ browser.contextMenus.create({
 
 browser.contextMenus.create({
 	id: "my-scuttle",
-	title: "My (Semantic)Scuttle",
+	title: "My Bookmarkz",
 	onclick: function(){
     browser.storage.local.get(["instance_url","username"],function(item){
       myurl = item["instance_url"] + "/bookmarks.php/" + item["username"];
